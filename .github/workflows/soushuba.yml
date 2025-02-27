@@ -12,7 +12,7 @@ jobs:
     env:
       SOUSHUBA_HOSTNAME: ${{ secrets.www.soushu2030.com }}
       SOUSHUBA_USERNAME: ${{ secrets.RobustWYX }}
-      SOUSHUBA_PASSWORD: ${{ secrets.3,1S1W9E6W3W8J7J }}
+      SOUSHUBA_PASSWORD: ${{ secrets.31S1W9E6W3W8J7j }}
 
     steps:
       - name: Check out repository code

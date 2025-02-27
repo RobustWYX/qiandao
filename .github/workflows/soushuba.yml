@@ -10,9 +10,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      SOUSHUBA_HOSTNAME: ${{ secrets.SOUSHUBA_HOSTNAME }}
-      SOUSHUBA_USERNAME: ${{ secrets.SOUSHUBA_USERNAME }}
-      SOUSHUBA_PASSWORD: ${{ secrets.SOUSHUBA_PASSWORD }}
+      SOUSHUBA_HOSTNAME: ${{ secrets.www.soushu2030.com }}
+      SOUSHUBA_USERNAME: ${{ secrets.RobustWYX }}
+      SOUSHUBA_PASSWORD: ${{ secrets.3,1S1W9E6W3W8J7J }}
 
     steps:
       - name: Check out repository code

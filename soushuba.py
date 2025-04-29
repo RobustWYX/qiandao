@@ -8,6 +8,9 @@ import sys
 from copy import copy
 
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+response = requests.get('https://www.soushu2030.com', verify=False)
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET

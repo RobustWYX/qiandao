@@ -9,7 +9,7 @@ from copy import copy
 
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET

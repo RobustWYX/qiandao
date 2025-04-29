@@ -9,8 +9,7 @@ from copy import copy
 
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-response = requests.get('https://www.soushu2030.com', verify=False)
+    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
@@ -28,7 +27,7 @@ logger.addHandler(ch)
 
 def get_refresh_url(url: str):
     try:
-        response = requests.get(url)
+        response = requests.get(url,verify=False)
         if response.status_code != 403:
             response.raise_for_status()
 
@@ -49,7 +48,7 @@ def get_refresh_url(url: str):
         return None
 
 def get_url(url: str):
-    resp = requests.get(url)
+    resp = requests.get(url,verify=False)
     soup = BeautifulSoup(resp.content, 'html.parser')
     
     links = soup.find_all('a', href=True)
